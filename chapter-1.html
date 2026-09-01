@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1</title>
+<link rel="canonical" href="https://silence.auraea.fyi/chapter-1.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" type="image/png" href="favicon.png">
+<style>
+
+.chapter-hero{
+  position:relative; overflow:hidden; isolation:isolate;
+  padding:56px 24px 36px;
+  background:var(--hero-bg);
+  color:var(--cream);
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.chapter-hero::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(26,22,28,0.55) 0%, rgba(15,15,22,0.78) 100%),
+    url("assets/fraying-silk.png");
+  background-size:cover; background-position:50% 42%;
+  filter:saturate(1.02) contrast(1.03);
+  opacity:0.9;
+}
+.chapter-hero-inner{ max-width:720px; margin:0 auto; }
+.chapter-eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-mono); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--blush); margin-bottom:14px;
+}
+.chapter-eyebrow::before, .chapter-eyebrow::after{ content:""; width:18px; height:1px; background:var(--blush); opacity:.6; }
+.chapter-hero h1{
+  font-family:var(--font-display); font-weight:500; font-style:italic;
+  font-size:clamp(2.6rem, 6vw, 4rem); line-height:.95; margin:0 0 12px;
+  letter-spacing:-.02em; text-shadow:0 2px 18px rgba(0,0,0,0.35);
+}
+.chapter-hero h1 span{ font-style:normal; font-weight:600; }
+.chapter-meta{
+  font-family:var(--font-mono); font-size:.70rem; letter-spacing:.08em; text-transform:uppercase;
+  color:color-mix(in srgb, var(--cream) 72%, transparent);
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px 16px;
+}
+.chapter-meta em{ font-style:normal; color:var(--paper-2); }
+.chapter-actions{ margin-top:22px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+.prose .chapter-num{
+  display:block; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--rose-deep); margin-bottom:8px;
+}
+.prose .chapter-title{
+  font-family:var(--font-display); font-size:2rem; font-weight:600; line-height:1.1;
+  margin:0 0 6px; border:none; padding:0;
+}
+.prose .chapter-subtitle{
+  font-family:var(--font-serif); font-style:italic; font-size:1.05rem; color:var(--plum-soft);
+  margin:0 0 22px; line-height:1.5;
+}
+.prose .lead::first-letter{
+  float:left; font-family:var(--font-display); font-size:3.1rem; line-height:.82;
+  padding:6px 10px 0 0; color:var(--rose-deep); font-weight:600;
+}
+.prose .scene-break{
+  text-align:center; margin:28px auto; color:var(--rose-muted);
+  font-size:12px; letter-spacing:.35em;
+}
+.next-card{
+  margin-top:28px; padding:18px 20px;
+  border:1px dashed var(--line-strong); border-radius:var(--radius);
+  background:color-mix(in srgb, var(--paper) 85%, white);
+  text-align:center;
+}
+.next-card p{ font-family:var(--font-body) !important; font-size:.88rem !important; color:var(--ink-soft) !important; margin:0 !important; }
+.next-card a{ color:var(--rose-deep); text-decoration:none; font-weight:600; }
+.next-card a:hover{ text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Deafening Silence home">
+    <span class="brand-name">Deafening Silence</span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="site-nav" id="siteNav">
+    <a class="nav-link" href="index.html#outline">Outline</a>
+    <a class="nav-link is-active" href="chapter-1.html">Chapter 1</a>
+    <a class="nav-link" href="https://www.auraea.fyi" target="_blank" rel="noopener">auraea.fyi</a>
+  </nav>
+</header>
+
+<section class="chapter-hero">
+  <div class="chapter-hero-inner">
+    <h1><em>Chapter <span>1</span></em></h1>
+    <div class="chapter-meta">
+    </div>
+    <div class="chapter-actions">
+      <a class="btn-ghost" href="index.html#chapters">Back to planning docs</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap reader" id="read">
+  <aside class="toc" aria-label="Chapter navigation">
+    <ol>
+      <li><a href="#read">Chapter 1</a></li>
+    </ol>
+    <div class="toc-foot">
+      <p style="margin:0 0 8px;"><strong style="color:var(--plum);">Deafening Silence</strong></p>
+    </div>
+  </aside>
+
+  <article class="prose">
+    <div class="paper-sheet">
+      <h2 class="chapter-title">1</h2>
+
+      <p class="lead">Quinn counted the rent three times before she left the apartment, and it came up short all three times.</p>
+
+      <p>Two hundred and forty credits. That was what the block warden wanted by the end of the week, and what she had folded into the lining of her jacket was closer to a hundred and ninety, most of it earned hauling scrap out of a collapsed foundry two wards over. The gap wasn't large. It was the kind of gap that felt survivable <em>right</em> up until it wasn't, the ones that turned into an eviction notice nailed to a door, or into the warden deciding Quinn and Cecilia's little room would make a fine storage closet for somebody who paid on time.</p>
+
+      <p>Tonight's job would close it. A courier run, buyer waiting in the fight club that operated out of the old warehouse near the Veil, payment for a satchel of parts Quinn had spent two days scavenging out of a dead transit station. If the buyer paid what he'd promised, she'd have the rent and enough left over to get Cecilia's writing tablet fixed, the one with the cracked input panel that had been dying by little by little for a month. Cecilia never complained about it. She just typed slower, and flexed her fingers afterward like they ached, and said nothing, like it didn't matter.</p>
+
+      <p>It mattered. Quinn had decided that a long time ago, quietly, the way she decided most things that mattered to her, without telling anyone, including herself.</p>
+
+      <p>She moved through the Underbelly the way she moved through everything: low, quiet, and seemingly unhurried. The tunnels here didn't forgive carelessness. She knew every twist of this particular stretch, every place the ceiling dipped low enough to crack a skull, every stretch of ground where the concrete had rotted through and would swallow a foot to the ankle if you didn't know to step around it. She'd learned all of it the hard way, the only way anything got learned down here.</p>
+
+      <p>A tangle of overgrown vines blocked the mouth of the passage she needed, thick ropes of green choking the narrow gap between two collapsed walls. She drew one of her knives, the hilt worn smooth and dark where her palm had gripped it a thousand times before, the cord wrapped around it frayed and rewound more times than she could count. The edge, though, she kept honest. She sharpened it most nights out of habit as much as need, a small ritual she rarely thought about while doing it, and it went through the vines clean and quiet. She cleared just enough space to slip past. The vines here always grew back within a week. Something about the damp, or the old machinery underneath still leaking heat and moisture into the soil. She didn't think about it much anymore.</p>
+
+      <p>Beyond the vines, the tunnel opened onto a stretch of open ground that ran up against the Veil.</p>
+
+      <p>She'd seen it more times than she could count, and it still did something to her, every time, that she'd never fully explained even to Cecilia. The Veil rose out of the gloom, impossibly gargantuan: tangled metal fused with living vine, decades of growth and rust and reinforcement layered over each other until nobody could say anymore where the original barrier ended and the wild things growing over it began. It ran the length of the district and beyond, curling up into the dark overhead, and somewhere above all that tangled mass was the Uppercity, the real one, the gleaming one, the one that showed up in the propaganda feeds and nowhere else Quinn had ever been allowed to look. She'd crossed the Veil more times than she could count on jobs like this one, but crossing wasn't the same as arriving. Every run put her in the same narrow sliver of the other side: loading docks, blind drop points, windowless backrooms where business got done that both cities pretended didn't happen. She'd never once stood on an actual street up there, never seen the towers as anything but smears of light reflected off low cloud from underneath. Whatever waited past this pocket of concrete and fluorescent hum might as well have been a different planet for all she'd laid eyes on it.</p>
+
+      <p>She pressed her palm flat against the rusted surface. Cold, the way it always was. She let her hand fall away and allowed herself, for exactly as long as it took to draw one breath, to wonder what it might have been like to be born on the other side of it. Clean air. Steady lights. A childhood...</p>
+
+      <p>Then she shook it off, because wondering never fixed anything, and there was a job waiting.</p>
+
+      <p>She'd found the weak spot months ago: a seam low in the Veil's structure where the membrane had thinned enough to give a little under pressure, if you knew how to ask it. Her hand went to the small cloth tucked in her coat, damp with whatever concoction Cecilia had mixed up to mask her scent from the things that patrolled this stretch. She hadn't listened <em>too</em> closely when Cecilia explained the chemistry of it. She trusted it anyway. She trusted most things Cecilia made with her hands, with the same unthinking trust she gave her own knives.</p>
+
+      <p>She rubbed the cloth over her throat and wrists, breathed slow, and pressed into the seam. The barrier gave the way it always did, reluctant and grudging, like it was deciding whether to let her through or crush her for trying. Then it slid back just enough, and she was through, into the sterile hush on the other side, the one that always felt like stepping into a held breath.</p>
+
+      <p>The passage widened as she went, jagged rock smoothing into reinforced panel, the flickering rot-light of the Underbelly giving way to something steadier and colder. It never took long before the corridor spat her out near the old warehouse that hosted the fight club, one of the few places on this side of the Veil where both wards' business got done without anyone asking too many questions.</p>
+
+      <p>Two guards stood at the entrance, arms crossed, the kind of men who got paid to look unimpressed by everything. Quinn raised her hands, palms open, unhurried.</p>
+
+      <p>"Just passing through," she said. "No trouble."</p>
+
+      <p>One of them looked her over, taking in the scars, the knives at her hip, the general unbothered set of her shoulders. "You look like you've walked through Blight itself. What's your business here?"</p>
+
+      <p>"Business that pays your boss's cut," she said. "Same as always."</p>
+
+      <p>He held her gaze a beat longer than necessary, the kind of pause meant to remind her who had the door and who didn't. She let it sit there without flinching, because flinching was the only wrong answer. Eventually he stepped aside, and the other one nodded her toward the alley that led inside, and that was that. It always went about the same way. She'd stopped finding it interesting a long time ago, though she never stopped being careful.</p>
+
+      <p>Inside, the heat hit her first, a wet wall of it thick enough to catch in her throat, built from too many bodies packed into a space that had never been meant to hold this many. The air tasted like copper and cheap liquor and the burnt-metal tang of the sputtering floodlights rigged along the rafters, one of which strobed every few seconds like it couldn't decide whether to die. Somewhere ahead, a fighter hit the mat hard enough that Quinn felt it through the concrete under her boots, and the crowd around the ring roared, half of them cursing, half of them screaming for blood, money changing hands in fists and shoves before the man had even finished spitting out a tooth.</p>
+
+      <p>She kept to the edges, one shoulder turned, sliding through the gaps between clustered bodies rather than pushing straight through them, the way she'd learned a long time ago was the only way through a crowd like this without getting shoved back twice as hard. Sweat, someone's cheap cigarette smoke, the underlying rot smell that never quite left any building this deep in the ward. She scanned faces on reflex, cataloguing exits without meaning to, until she found the one she'd actually come for.</p>
+
+      <p>He was leaning against a broken crate near the back, half in shadow, wiry and scarred, already grinning like he'd been watching the door and waiting to see her walk through it.</p>
+
+      <p>"Don't waste my time," she said, low enough to carry over the noise but no further. "Where's my payment?"</p>
+
+      <p>He reached into his coat, unhurried, and pulled out a wrapped bundle of credits. Quinn's eyes flicked to it, then to the room around them out of habit, cataloguing exits, counting bodies, marking the two enforcers stationed near the far door with their hands loose near their weapons. Old instinct. She never stopped doing it, not even in a room she'd walked into a hundred times before.</p>
+
+      <p>She was reaching for the bundle when the noise outside changed. Not louder exactly, just wrong, a different pitch cutting under the crowd's roar, and every instinct she owned came awake at once before her mind had caught up to why.</p>
+
+      <p>Then the doors went down.</p>
+
+      <p>Not opened, down, kicked inward hard enough to crack the frame, and white light flooded in behind a wedge of armored bodies moving in that horrible, unhurried unison that meant they'd done this a hundred times before and expected to do it a hundred more. Boots on concrete, a rhythm too even to be anything but drilled. Someone's rifle light swept the crowd and caught Quinn full in the face for half a second, searing white, and she was already turning away from it, already moving, before the voice hit, amplified and flat and utterly certain of itself.</p>
+
+      <p>"Don't move. This is a raid. Surrender now."</p>
+
+      <p>For half a second the whole warehouse seemed to hang there, caught between one heartbeat and the next, and then it broke apart entirely. Bodies slammed into her from every direction at once, someone's elbow catching her ribs, someone else's shoulder driving her half a step sideways before she could plant her feet. A length of pipe arced past her ear close enough that she felt the air off it, swung by some fool aiming for a Sentinel and connecting with a support beam instead, the clang of it lost under the screaming. Her buyer was already gone, credits and all, swallowed into the crush before she'd so much as gotten a hand around his sleeve.</p>
+
+      <p>She swore under her breath and didn't chase him. Chasing meant staying in a room filling up with armored enforcement and a raid warrant, and she had a very short list of things she wanted to explain to a judge, which was to say, none. She turned for the back instead, shoving through bodies that shoved back just as hard, the crowd a single panicked animal now with no interest in who it trampled on the way out.</p>
+
+      <p>A hand closed around her wrist, hard, someone using her as leverage to keep from going down under the crush. She wrenched free on instinct before she'd even seen whose it was, twisting loose and shoving through, her fist cracking against something solid in the process, her jaw catching a stray elbow from somebody else entirely a second later. She had no time to register either properly. It was over that fast, ugly and forgettable, less a fight than the physical residue of a hundred people trying to leave through three exits at once.</p>
+
+      <p>She reached the maze of crates and broken machinery at the back, familiar from a dozen other nights like this one, and found the hatch half hidden behind a snarl of cable. She wrenched it open and dropped through into the dark below.</p>
+
+      <p>The stink hit her before her boots did, wet rot and stagnant water. The tunnel was close enough that her shoulders brushed both walls if she wasn't careful, the floor slick with runoff that swallowed sound, and something skittered away from her boots in the dark more than once, small and fast and gone before she could get a knife anywhere near it. She kept low, kept moving, listening behind her for boots that never came. Whatever the Sentinels wanted tonight, it wasn't a scavenger who'd already lost her buyer and her payment both, and after the first hundred meters she let herself half believe it. She reached the ladder at the far end without further trouble and climbed up into open air, into the tangled scrapyard alleys of the Middle Ward, close enough to home now that the ache in her jaw and the sting across her knuckles were finally catching up to the adrenaline that had been holding them off.</p>
+
+      <p>The job had failed. Not almost. Failed completely, the rent still short, the tablet still cracked, and now a bruise rising along her jaw and a knuckle split on a stranger's face for a night that hadn't even given her the dignity of being an actual fight. She'd have to find some way to make the story sound better than it was by the time she got through her own front door.</p>
+
+      <p>The apartment building looked the way it usually looked this late: half its windows dark, a curtain rigged where a door should have been, the hallway thick with the smell of mildew and old wiring. Quinn let herself in, boots dragging, and pushed through into the small cluttered room she and Cecilia had made into something like a home.</p>
+
+      <p>Cecilia was at the table, hunched over a cup of synthetic tea gone lukewarm, the cracked tablet open in front of her, a handful of pages scattered nearby covered in her small, careful handwriting where the tablet had failed her partway through. She looked up when the door creaked, and something in her face shifted the moment she saw Quinn.</p>
+
+      <p>"Hey," she said, quiet, a tired smile finding its way onto her face despite everything. "Tough one?"</p>
+
+      <p>Quinn tossed her jacket over the back of a chair and dropped onto the couch beside her, wincing only slightly. "It wasn't a fight. All I won was a <em>very</em> long walk."</p>
+
+      <p>"That good, huh." Cecilia set the tablet aside. Her eyes moved over Quinn, cataloguing the split knuckle, the new bruise darkening along her jaw, the tightness in her shoulders that Quinn hadn't managed to shake off yet. She didn't ask about any of it directly. She never did, not at first. She let Quinn come to it in her own time, the way you'd wait out a storm instead of trying to argue with it.</p>
+
+      <p>"Buyer bolted the second the Sentinels showed," Quinn said, staring at the ceiling instead of at Cecilia. "Raid on the club. I didn't even get my hand fully around the credits before he was gone."</p>
+
+      <p>Cecilia was quiet a moment. "So the rent."</p>
+
+      <p>"Short. Same as it was this morning, only now I've also got a bruise for my trouble." Quinn tried to make the words come out light, the way they usually did, but there was an edge underneath them she couldn't quite smooth away, something closer to frustration than she wanted to show. She'd promised herself this would be the week she fixed it, closed the gap, stopped watching Cecilia do the math in her head every time rent came up. Instead she'd come home with less than she'd left with.</p>
+
+      <p>"Quinn." Cecilia reached over and took her hand, the gesture familiar enough that Quinn barely registered it happening until their fingers had already laced together. "We'll figure out the warden. We always do."</p>
+
+      <p>"We almost always do," Quinn said. "There's a difference."</p>
+
+      <p>Cecilia's mouth twitched, not quite a smile. "There is. I'm choosing to ignore it for now." She squeezed Quinn's hand once, then let it go, and reached for the tablet again, running her thumb over the crack in its input panel like she could smooth it shut through sheer will. "How bad was the raid? Anyone you knew get pulled in?"</p>
+
+      <p>"Didn't stick around to check names." Quinn dragged a hand through her hair, feeling the last of the adrenaline finally start to drain out of her, leaving something heavier behind it. "I got out through the tunnels. Same as always."</p>
+
+      <p>"Same as always," Cecilia repeated, and there was something careful in the way she said it, something that told Quinn she'd noticed how many times lately that phrase had needed saying. She didn't push it further. She just looked at Quinn for a long moment, the kind of look that saw more than Quinn usually let people see, and then let it go, because pushing wasn't something Cecilia did, not with her, not yet.</p>
+
+      <p>Quinn reached into her jacket, into the lining where she'd folded the night's earnings, and pulled out the small bundle of credits she did have. Not what she'd hoped for. Not enough to close the gap on the rent, and definitely not enough to get the tablet fixed. But it was something.</p>
+
+      <p>"It's not the full rent," she said. "Not close. But it's something toward it, and I figured you should know I didn't come home completely empty handed."</p>
+
+      <p>Cecilia looked at the credits, then at Quinn, and something in her expression softened even as the worry stayed right where it had been. "That's not nothing," she said. "But it's also not going to make the warden happy."</p>
+
+      <p>"No," Quinn admitted. "It's really not."</p>
+
+      <p>"So what happens when he comes collecting?"</p>
+
+      <p>Quinn didn't have an answer for that, not one she wanted to say out loud, and for a moment the two of them just sat there with the unresolved shape of it between them, the rent still short, the raid still a loose thread that might or might not come looking for either of them later. She could feel the old restlessness stirring in her chest, the urge to already be planning the next job, the next angle, the next way to close a gap that never seemed to stay closed for long. She let it sit there instead of chasing it, because Cecilia was still watching her, and there was something in staying still, just for a minute, that felt harder and more necessary than anything she'd done in the tunnels tonight.</p>
+
+      <p>"I'll figure it out," she said finally. "I always do."</p>
+
+      <p>"You almost always do," Cecilia said, echoing her own words back at her, and this time there was real warmth in it, enough to pull the corner of Quinn's mouth up despite everything.</p>
+
+      <p>"Rude," Quinn said. "Accurate. But rude."</p>
+
+      <p>Cecilia laughed, a small tired sound, and leaned her head against Quinn's shoulder. For a while neither of them said anything else. The tea went cold. The tablet sat between them with its cracked panel and its unfinished pages, and outside the walls of the building the Underbelly kept breathing the way it always did, indifferent to whatever the two of them owed or didn't owe, whoever was still out there hunting for whoever the raid had scattered.</p>
+
+      <p>Quinn thought about the warden, and the buyer who'd vanished with the credits she'd earned. She thought about the tablet, and how she'd have to find another way to get the part it needed. None of it was solved. None of it was going to solve itself overnight. But Cecilia's head was heavy and warm against her shoulder, and for the length of that quiet, that felt like enough to be getting on with.</p>
+
+      <p>"I did have one idea," Quinn said eventually, quiet, more to break the silence than because she had anything real behind it yet.</p>
+
+      <p>"Dangerous?"</p>
+
+      <p>"Only moderately."</p>
+
+      <p>Cecilia sighed against her shoulder, the sound half exasperation and half something gentler. "Tell me tomorrow. Let tonight just be tonight."</p>
+
+      <p>Quinn didn't argue. She let her eyes close, let the ache in her legs and the throb in her knuckles settle into something distant and manageable, and let the two of them sit there a while longer, rent unpaid, tablet uncracked in name only, the whole night's failure still sitting on the table in the shape of a bundle of credits that wasn't nearly enough. It wasn't the ending she'd wanted to bring home. It was the one she had, and for now, with Cecilia's weight against her side and the door locked behind them both, it would have to do.</p>
+
+      <div class="scene-break" aria-hidden="true">&nbsp; ✦ &nbsp;</div>
+
+      <div class="next-card" id="continue">
+        <p><a href="index.html#chapters">Back to overview</a></p>
+      </div>
+
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="https://www.auraea.fyi">www.auraea.fyi</a>
+    <a href="https://silence.auraea.fyi">silence.auraea.fyi</a>
+    </div>
+  <div>© <span id="year"></span> lexie</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="js/render.js"></script>
+</body>
+</html>

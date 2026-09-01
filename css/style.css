@@ -1,5 +1,4 @@
 :root{
-  /* fraying silk — warm → dark */
   --cream:        #fffaf5;
   --paper:        #fdf6ee;
   --paper-2:      #f2e6d9;
@@ -58,14 +57,12 @@ a:focus-visible, button:focus-visible{
   border-radius:2px;
 }
 
-/* grain overlay like personal-index but muted */
 .grain{
   position:fixed; inset:0; z-index:-1; pointer-events:none;
   opacity:.22; mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
 }
 
-/* ── site header ── */
 .site-header{
   position:sticky; top:0; z-index:40;
   display:flex; align-items:center; gap:20px;
@@ -121,7 +118,6 @@ a:focus-visible, button:focus-visible{
   .brand-sub{ display:none; }
 }
 
-/* ── hero — fraying silk ── */
 .hero{
   position:relative; overflow:hidden; isolation:isolate;
   min-height:min(88vh, 820px);
@@ -148,7 +144,7 @@ a:focus-visible, button:focus-visible{
     radial-gradient(55% 70% at 82% 82%, rgba(161,74,79,0.18), transparent 65%);
   pointer-events:none;
 }
-/* seam between hero image and paper — clean cut, not squiggly */
+
 .hero-torn{
   position:absolute; left:0; right:0; bottom:-1px; height:24px; z-index:1;
   pointer-events:none; color:var(--cream);
@@ -338,7 +334,7 @@ a:focus-visible, button:focus-visible{
 .reader{
   display:grid; grid-template-columns:250px minmax(0,1fr);
   gap:42px; align-items:start;
-  padding:32px 0 80px;
+  padding-top:32px; padding-bottom:80px;
 }
 @media(max-width:900px){ .reader{ grid-template-columns:1fr; } }
 
@@ -451,7 +447,6 @@ a:focus-visible, button:focus-visible{
 .callout-title::before{ content:"◆"; font-size:8px; }
 .callout p{ margin:0; font-family:var(--font-serif); font-size:.95rem; color:var(--ink-soft); }
 
-/* world split cards (Uppercity vs Underbelly) */
 .split{
   display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:20px 0 24px;
 }
@@ -475,7 +470,6 @@ a:focus-visible, button:focus-visible{
 }
 .split-card p{ font-family:var(--font-serif); font-size:.92rem; line-height:1.6; margin:0; }
 
-/* character cards */
 .char-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:18px 0 24px; }
 @media(max-width:640px){ .char-grid{ grid-template-columns:1fr; } }
 .char-card{
