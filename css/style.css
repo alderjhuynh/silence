@@ -159,6 +159,15 @@ a:focus-visible, button:focus-visible{
   background:linear-gradient(180deg, rgba(28,27,34,0.07), transparent);
   opacity:.9;
 }
+body.is-blighted .hero-torn{
+  color:#fdf1e0;
+}
+body.is-blighted .hero-torn::before{
+  background:linear-gradient(90deg, transparent, rgba(33,26,19,0.08) 10%, rgba(60,30,34,0.12) 50%, rgba(33,26,19,0.08) 90%, transparent);
+}
+body.is-blighted .hero-torn::after{
+  background:linear-gradient(180deg, rgba(33,26,19,0.08), transparent);
+}
 .hero-inner{
   max-width:860px; margin:0 auto; text-align:center;
   padding:0 8px;
@@ -227,6 +236,11 @@ a:focus-visible, button:focus-visible{
   user-select: none;
   -webkit-user-select: none;
   display: block;
+  transition: height 620ms cubic-bezier(.22,1,.36,1), margin 620ms ease;
+}
+.thread-divider.is-blighted{
+  height: 150px;
+  margin: 8px auto;
 }
 .thread-divider svg{
   position: absolute;
@@ -267,7 +281,7 @@ a:focus-visible, button:focus-visible{
   outline-offset:4px;
   border-radius:2px;
 }
-.thread-divider .blight-svg{
+ .thread-divider .blight-svg{
   background: none !important;
   background-image: none !important;
   border: none !important;
@@ -278,15 +292,120 @@ a:focus-visible, button:focus-visible{
   overflow: visible !important;
   pointer-events: none !important;
 }
- @media(max-width:600px){
+ @media(max-width:900px){
+  .thread-divider.is-blighted{ height: 120px; }
+}
+  @media(max-width:600px){
   .thread-divider{ height: 24px; }
+  .thread-divider.is-blighted{ height: 96px; margin: 8px auto; }
 }
 
-/* ── wrap ── */
+/* ── Blight bleed: site-wide extras triggered by .is-blighted on body ── */
+body{
+  transition: background-color 700ms ease, filter 700ms ease;
+}
+body.is-blighted{
+  background-color: #fdf1e0;
+}
+body.is-blighted .site-header{
+  border-bottom-color: rgba(33,26,19,0.22);
+  background: color-mix(in srgb, var(--cream) 76%, #211a13 8%);
+  transition: background 700ms ease, border-color 700ms ease;
+}
+body.is-blighted .hero-bg{
+  background:
+    linear-gradient(102deg, rgba(26,22,28,0.72) 0%, rgba(26,22,28,0.48) 38%, rgba(26,22,28,0.22) 62%, rgba(26,22,28,0.10) 100%),
+    linear-gradient(180deg, rgba(15,15,22,0.35) 0%, rgba(15,15,22,0.05) 100%),
+    url("../assets/blight.png");
+  background-size: cover;
+  background-position: 52% center;
+  filter: saturate(0.62) contrast(1.08) brightness(0.88);
+  transition: filter 700ms ease, background 700ms ease;
+}
+body.is-blighted .hero::after{
+  background:
+    radial-gradient(70% 90% at 18% 18%, rgba(33,26,19,0.22), transparent 60%),
+    radial-gradient(55% 70% at 82% 82%, rgba(33,26,19,0.18), transparent 65%);
+  opacity: 0.95;
+  transition: background 700ms ease;
+}
+body.is-blighted .paper-sheet,
+body.is-blighted .doc-card{
+  border-color: rgba(33,26,19,0.18);
+  box-shadow: 0 1px 0 rgba(33,26,19,0.07), 0 18px 42px -22px rgba(33,26,19,0.45), 0 0 0 1px rgba(33,26,19,0.04) inset;
+  transition: border-color 700ms ease, box-shadow 700ms ease;
+}
+body.is-blighted .paper-sheet::before{
+  background: linear-gradient(90deg, #211a13, #5a2a2e, #8a3a3f, #211a13);
+  opacity: 0.85;
+}
+body.is-blighted .doc-card::before{ opacity: 0.65; }
+body.is-blighted .doc-card--featured{
+  background:
+    linear-gradient(180deg, rgba(253,246,238,0.94), rgba(253,246,238,0.94)),
+    url("../assets/blight.png");
+  background-size: cover; background-position: 60% center;
+  border-color: rgba(33,26,19,0.22);
+}
+body.is-blighted .chapter-hero::before{
+  background:
+    linear-gradient(180deg, rgba(26,22,28,0.55) 0%, rgba(15,15,22,0.78) 100%),
+    url("../assets/blight.png");
+  background-size: cover; background-position: 50% 42%;
+}
+body.is-blighted .site-footer{
+  border-top-color: rgba(33,26,19,0.14);
+  background: color-mix(in srgb, var(--paper) 55%, #211a13 6%);
+}
+body.is-blighted .grain{ opacity: .30; }
+body.is-blighted .reader{
+  padding-top: 12px;
+  transition: padding-top 620ms ease;
+}
+
+/* soft vignette veil — does not block interaction */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 700ms ease;
+  background:
+    radial-gradient(120% 70% at 50% -8%, rgba(33,26,19,0.10), transparent 58%),
+    radial-gradient(100% 60% at 50% 112%, rgba(33,26,19,0.09), transparent 62%),
+    radial-gradient(70% 50% at 0% 50%, rgba(33,26,19,0.06), transparent 62%),
+    radial-gradient(70% 50% at 100% 50%, rgba(33,26,19,0.06), transparent 62%);
+}
+body.is-blighted::after{ opacity: 1; }
+
+/* faint thorny corner tendrils — reveal with body blight */
+body.is-blighted .hero,
+body.is-blighted .site-footer{
+  position: relative;
+}
+body.is-blighted .hero-inner{ position: relative; z-index: 1; }
+body.is-blighted .hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Cpath d='M0 40 C30 5, 60 75, 100 40 S170 5, 200 40' fill='none' stroke='%23211a13' stroke-width='1.1' opacity='0.9'/%3E%3Cpath d='M0 55 C40 20, 70 85, 110 55 S170 22, 200 55' fill='none' stroke='%235a2a2e' stroke-width='0.8' opacity='0.7'/%3E%3C/svg%3E") center/cover no-repeat;
+  mix-blend-mode: multiply;
+  transition: opacity 700ms ease;
+}
+@media(prefers-reduced-motion:reduce){
+  .thread-divider{ transition: none; }
+  body, body.is-blighted .hero-bg, body::after{ transition: none; }
+}
+
 .wrap{ max-width:1120px; margin:0 auto; padding:0 clamp(16px,4vw,32px); }
 .wrap-narrow{ max-width:780px; }
 
-/* ── intro ── */
 .intro{
   max-width:62ch; margin:56px auto 36px; text-align:center;
   padding:0 24px;
@@ -301,7 +420,6 @@ a:focus-visible, button:focus-visible{
 }
 .intro p + p{ margin-top:14px; }
 
-/* ── archive / document grid ── */
 .section-heading{
   display:flex; align-items:baseline; gap:14px;
   margin:56px 0 22px;
