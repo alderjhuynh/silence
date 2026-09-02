@@ -218,21 +218,69 @@ a:focus-visible, button:focus-visible{
 .btn-ghost:hover{ background:rgba(255,250,245,0.14); transform:translateY(-1px); border-color:rgba(255,250,245,0.34); }
 .btn-primary svg, .btn-ghost svg{ width:16px; height:16px; flex:none; }
 
-/* ── silk thread divider ── */
 .thread-divider{
-  height:28px; margin:0; display:flex; align-items:center; justify-content:center;
-  gap:0; color:var(--line-strong); position:relative;
+  position: relative;
+  width: min(900px, 92vw);
+  height: 28px;
+  margin: 8px auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  display: block;
 }
-.thread-divider::before{
-  content:""; position:absolute; left:50%; top:50%; width:min(520px, 70vw); height:1px;
-  transform:translate(-50%,-50%);
-  background:linear-gradient(90deg, transparent, var(--line-warm) 15%, var(--rose-muted) 50%, var(--line-warm) 85%, transparent);
+.thread-divider svg{
+  position: absolute;
+  left: 0; top: 50%;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  overflow: visible;
+  pointer-events: none;
 }
-.thread-divider span{
-  position:relative; background:rgba(255,250,245,0.08); padding:0 14px;
-  color:var(--rose-muted); font-size:11px; letter-spacing:.22em;
+.thread-divider .clean{
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  color: var(--rose-muted);
+  transition: opacity 500ms ease;
+  pointer-events: none;
 }
-.thread-divider--dark span{ background:transparent; }
+.thread-divider .clean-line{
+  flex: 1;
+  height: 1px;
+  background: var(--rose-muted);
+  opacity: 0.9;
+}
+.thread-divider .clean-star{
+  flex: none;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--rose-muted);
+}
+.thread-divider.is-blighted .clean{ opacity: 0; }
+.thread-divider:focus-visible{
+  outline:2px solid var(--rose-deep);
+  outline-offset:4px;
+  border-radius:2px;
+}
+.thread-divider .blight-svg{
+  background: none !important;
+  background-image: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  position: absolute !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+ @media(max-width:600px){
+  .thread-divider{ height: 24px; }
+}
 
 /* ── wrap ── */
 .wrap{ max-width:1120px; margin:0 auto; padding:0 clamp(16px,4vw,32px); }
@@ -486,7 +534,8 @@ a:focus-visible, button:focus-visible{
 }
 .char-card p{ font-family:var(--font-serif); font-size:.92rem; color:var(--ink-soft); line-height:1.65; margin:0; }
 
-.blight{
+div.blight,
+.prose .blight{
   margin:22px 0; padding:20px 20px 18px;
   border-radius:var(--radius);
   background:
@@ -495,16 +544,20 @@ a:focus-visible, button:focus-visible{
   color:#eadfd9; border:1px solid rgba(255,255,255,0.08);
   position:relative; overflow:hidden;
 }
-.blight::before{
+div.blight::before,
+.prose .blight::before{
   content:""; position:absolute; inset:0;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Cpath d='M0 40 C30 5, 60 75, 100 40 S170 5, 200 40' fill='none' stroke='%23d4a0a0' stroke-width='0.7' opacity='0.18'/%3E%3Cpath d='M0 55 C40 20, 70 85, 110 55 S170 22, 200 55' fill='none' stroke='%23c25a5c' stroke-width='0.5' opacity='0.14'/%3E%3C/svg%3E") center/cover no-repeat;
   opacity:.6; pointer-events:none;
 }
-.blight h4{
+div.blight h4,
+.prose .blight h4{
   position:relative; font-family:var(--font-display); font-size:1.15rem; margin:0 0 8px; color:#fff2e8;
 }
-.blight p{ position:relative; font-family:var(--font-serif); font-size:.94rem; color:#d8c8c8; line-height:1.65; margin:0 0 8px; }
-.blight p:last-child{ margin:0; }
+div.blight p,
+.prose .blight p{ position:relative; font-family:var(--font-serif); font-size:.94rem; color:#d8c8c8; line-height:1.65; margin:0 0 8px; }
+div.blight p:last-child,
+.prose .blight p:last-child{ margin:0; }
 
 .step-head{
   display:flex; align-items:baseline; gap:12px; margin:40px 0 12px;
