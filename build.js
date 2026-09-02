@@ -124,12 +124,8 @@ function buildChapterHtml(num, paragraphs, allNumsSorted) {
   }
 
   let nextCardInner = '';
-  if (prev && next) {
-    nextCardInner = `<p><a href="../${prev}/">← Chapter ${prev}</a> &nbsp;·&nbsp; <a href="../${next}/">Chapter ${next} →</a> &nbsp;·&nbsp; <a href="../index.html#chapters">Back to overview</a></p>`;
-  } else if (prev) {
-    nextCardInner = `<p><a href="../${prev}/">← Chapter ${prev}</a> &nbsp;·&nbsp; <a href="../index.html#chapters">Back to overview</a></p>`;
-  } else if (next) {
-    nextCardInner = `<p><a href="../${next}/">Continue to Chapter ${next} →</a> &nbsp;·&nbsp; <a href="../index.html#chapters">Back to overview</a></p>`;
+  if (next) {
+    nextCardInner = `<p><a href="../${next}/">Chapter ${next}</a></p>`;
   } else {
     nextCardInner = `<p><a href="../index.html#chapters">Back to overview</a></p>`;
   }
