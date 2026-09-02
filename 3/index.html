@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3</title>
+<link rel="canonical" href="https://silence.auraea.fyi/3/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../favicon.png">
+<style>
+
+.chapter-hero{
+  position:relative; overflow:hidden; isolation:isolate;
+  padding:56px 24px 36px;
+  background:var(--hero-bg);
+  color:var(--cream);
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.chapter-hero::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(26,22,28,0.55) 0%, rgba(15,15,22,0.78) 100%),
+    url("../assets/fraying-silk.png");
+  background-size:cover; background-position:50% 42%;
+  filter:saturate(1.02) contrast(1.03);
+  opacity:0.9;
+}
+.chapter-hero-inner{ max-width:720px; margin:0 auto; }
+.chapter-eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-mono); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--blush); margin-bottom:14px;
+}
+.chapter-eyebrow::before, .chapter-eyebrow::after{ content:""; width:18px; height:1px; background:var(--blush); opacity:.6; }
+.chapter-hero h1{
+  font-family:var(--font-display); font-weight:500; font-style:italic;
+  font-size:clamp(2.6rem, 6vw, 4rem); line-height:.95; margin:0 0 12px;
+  letter-spacing:-.02em; text-shadow:0 2px 18px rgba(0,0,0,0.35);
+}
+.chapter-hero h1 span{ font-style:normal; font-weight:600; }
+.chapter-meta{
+  font-family:var(--font-mono); font-size:.70rem; letter-spacing:.08em; text-transform:uppercase;
+  color:color-mix(in srgb, var(--cream) 72%, transparent);
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px 16px;
+}
+.chapter-meta em{ font-style:normal; color:var(--paper-2); }
+.chapter-actions{ margin-top:22px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+.prose .chapter-num{
+  display:block; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--rose-deep); margin-bottom:8px;
+}
+.prose .chapter-title{
+  font-family:var(--font-display); font-size:2rem; font-weight:600; line-height:1.1;
+  margin:0 0 6px; border:none; padding:0;
+}
+.prose .chapter-subtitle{
+  font-family:var(--font-serif); font-style:italic; font-size:1.05rem; color:var(--plum-soft);
+  margin:0 0 22px; line-height:1.5;
+}
+.prose .lead::first-letter{
+  float:left; font-family:var(--font-display); font-size:3.1rem; line-height:.82;
+  padding:6px 10px 0 0; color:var(--rose-deep); font-weight:600;
+}
+.prose .scene-break{
+  text-align:center; margin:28px auto; color:var(--rose-muted);
+  font-size:12px; letter-spacing:.35em;
+}
+.next-card{
+  margin-top:28px; padding:18px 20px;
+  border:1px dashed var(--line-strong); border-radius:var(--radius);
+  background:color-mix(in srgb, var(--paper) 85%, white);
+  text-align:center;
+}
+.next-card p{ font-family:var(--font-body) !important; font-size:.88rem !important; color:var(--ink-soft) !important; margin:0 !important; }
+.next-card a{ color:var(--rose-deep); text-decoration:none; font-weight:600; }
+.next-card a:hover{ text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="../index.html" aria-label="Deafening Silence home">
+    <span class="brand-name">Deafening Silence</span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="site-nav" id="siteNav">
+    <a class="nav-link" href="../index.html#outline">Outline</a>
+    <a class="nav-link" href="../1/">Chapter 1</a>
+    <a class="nav-link" href="../2/">Chapter 2</a>
+    <a class="nav-link is-active" href="./">Chapter 3</a>
+    <a class="nav-link" href="https://www.auraea.fyi" target="_blank" rel="noopener">auraea.fyi</a>
+  </nav>
+</header>
+
+<section class="chapter-hero">
+  <div class="chapter-hero-inner">
+    <h1><em>Chapter <span>3</span></em></h1>
+    <div class="chapter-meta">
+    </div>
+    <div class="chapter-actions">
+      <a class="btn-ghost" href="../index.html#chapters">Back to planning docs</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap reader" id="read">
+  <aside class="toc" aria-label="Chapter navigation">
+    <ol>
+      <li><a href="../1/">Chapter 1</a></li>
+      <li><a href="../2/">Chapter 2</a></li>
+      <li><a href="./" class="is-active">Chapter 3</a></li>
+    </ol>
+    <div class="toc-foot">
+      <p style="margin:0 0 8px;"><strong style="color:var(--plum);">Deafening Silence</strong></p>
+      <p style="margin:0;"><a href="../2/">Prev: Chapter 2</a></p>
+    </div>
+  </aside>
+
+  <article class="prose">
+    <div class="paper-sheet">
+      <h2 class="chapter-title">3</h2>
+
+      <p class="lead">Quinn woke to the sound of typing.</p>
+
+      <p>It was a strange sound to wake to, here. Most mornings the apartment opened with something rougher: pipes groaning awake in the walls, the block warden's boy shouting a name three doors down, and once, memorably, a rath the size of a housecat arguing with itself in the cralwspace above the ceiling. Typing was new. Or, not new, exactly, but the whole, rapid, even clatter of a keyboard that actually worked, no catch, no skipped letters and no long pause while Cecilia coased a stuck key back into cooperating. Quinn lay there a moment with her eyes still shut, just listening to it, drinking it in, and letting herself feel something close to pride about it.</p>
+
+      <p>The tablet. Bren's guy had come through after all.</p>
+
+      <p>She rolled over, blinking against the gray light leaking through the curtain, and found the other side of the bed empty and already cool, meaning Cecilia had been up for a while. Quinn pulled on yesterday's shirt and padded out into the front room, where Cecilia sat cross-legged in the one good chair with the tabled balanced on her knees, hair pulled back into a knot that had already mostly come undone, three empty cups of tea empty on the table besider her, and a fourth steaming, forgotten, at her elbow.</p>
+
+      <p>She didn't look up. Quinn had seen this particular kind of not-looking-up before, one that meant Cecilia had left the room entirely without having to leave the chair, gone somewhere behind her own eyes where the words were, and it would take a full minute of Quinn standing in front of her before Cecilia noticed her at all. Quin put the kettle on and leaned against the counter, watching.</p>
+
+      <p>Cecilia's face when she wrote was nothing like her face the rest of the time. The tiredness went out of it. Something else moved in underneath, quick and sharp, her eyebrows working through small private arguments with the sentence in front of her, her mouth twisting when a word came out wrong and then easing when she found the one she wanted. She typed for a stretch, stopped, reread it with her lips moving faintly, and deleted half of it with the particular ruthlessness of someone who trusted her own judgement more than her own drafts.</p>
+
+      <p>"You're staring," Cecilia said, without looking up.</p>
+
+      <p>"You're writing." Quinn crossed the room and dropped into the chair across from her, feet up on the table's edge in the spot Cecilia usually swatter her off of. Today she didn't. "Didn't wanna interrupt whatever's happening in there."</p>
+
+      <p>"You're not interrupting. I'm just finishing a thought before it gets away from me." Cecilia typed another line, then set the tablet face down on her knee, which was as close as she came to actually stopping. "It's working. The tablet. It's actually working."</p>
+
+      <p>"I noticed."</p>
+
+      <p>"No, you don't understand."</p>
+
+      <p>Cecilia leaned forward, and there it was again, that quickness under her face that Quinn didn't get to see often enough, not lately, not with the rent and the raids and everything else that ate up the hours they might have spent just like this. "I've been writing on scraps of paper for two weeks. Do you know how much slower that is?" I'd het a whole thought down and then have to go back and copy half of it onto the tabled later because I couldn't remember where I'd left off, and half of what I copied back came out wrong, flatter than what I meant, and I'd sit there for an hour trying to get it back to what it was supposed to sound like in my head." She said all of this fast, the words tripping over each other in her hurry to get them out, and Quinn watched her and thought, not for the first time, that this was the version of Cecilia she'd failed for, not the tired one who counted rent in her head and said nothing about the ache in her hands. This one.</p>
+
+      <p>"So today you're making up for lost time."</p>
+
+      <p>"Today I am making up for lost time." Cecilia parroted, picking the tablet back up, though she didn't type, just held it against her chest like something warm. "I have the whole Renna section rewritten. The one about the woman who runs the noodle stall by the transit kiosk, with the burned arm."</p>
+
+      <p>"I know the one. She yelled at me once for standing too close to her cart."</p>
+
+      <p>"She yells at everyone who stands to close to her cart, it's not personal, that's just Renna." Cecilia's mouth curved, and for a second, Quinn could see the story before she'd even heard it. "I asked her about the arm. I've wanted to for months, and I finally just asked her straight up. And do you know what she told me? She said a support beam came down on her during the collapse eleven years back, and by the time anyone dug her out, the arm below the elbow was charred."</p>
+
+      <p>"Blight," Quinn breathed.</p>
+
+      <p>"That's not the part I wanted." Cecilia shook her head, impatiend with herself, like the story was running ahead of her, and she had to wrestle it back into order. "The part I wanted was what she said after. She said the stall was her husband's before it was hers, and when he died, she thought about giving it up, but instead she taught herself to work the grill one-handed because giving it up would've meant something worse than losing the arm did. She's been running that cart for eleven years with one hand, Quinn. Eleven years, and half the ward eats there without ever once asking her about it, because no one needs the explanation. They just know her food is good, and her prices are fair, and that's the whole of what matters to anyone."</p>
+
+      <p>Quinn didn't say anything right away. She's heard version of this before, generally if not the specifics, because this is what Cecilia did with every story she gathered, turned it over until she found the thing underneath the obvious thing, the part that would matter to someone who'd never had to learn it the hard way. IT still caught her sometimes, how much care Cecilia put into people most of the Underbelly walked past without a second look.</p>
+
+      <p>"That's the book, then," Quinn said. "Renna and her arm."</p>
+
+      <p>"That's one page of the book." Cecilia set the tablet down at last, fully, and reached for the now-cold tea, and drank it anyway without seeming to notice. "There's a whole chapter on the medics who work out of the old transit depo, the ones who never ask anyone to pay what they can't afford. There's a section on the kids who run messages between wards because they're small enough to get trhough gaps the rest of us can't, and how half of them are better couriers at nine than msot adults ever manage to be," She glanced at Quinn, something wry in it. "Present company excepted"</p>
+
+      <p>"Generous of you."</p>
+
+      <p>"I'm an honest biographer." Cecilia's smile faded into something steadier, more serious, like the look she got when she was about to say something she'd clearly already said to herself a hundred times before, quietly, in the hours Quinn wasn't there to hear it. "I want it to be a whole city, Quinn. Not just the collapse and the disease and the raids, though it's got to have those too, I'm not writing a fairy tale. But everything else. The parts no one up there ever gets shown. The wedding I went to in the Third Ward last spring, where someone's cousin played a fiddle held together with wire because the original neck cracked years ago and no one could afford to replace it, and it still sounded better than anything I ever heard piped through the speakers at university receptions. The way strangers split food when someone's short, just because that's what you do. I want someone up there, someone who's never had to think about any of it, to read it and understand that the Underbelly isn't a place people ended up in because they deserved worse. It's a place people live. Fully. On purpose, some of them."</p>
+
+      <p>"You think they'll read it?"</p>
+
+      <p>It wasn't quite a challenge, though it came out close to one, closer than Quinn meant it to. She watched something flicker across Cecilia's face, not hurt exactly, more like she'd already braced for the question even if she hoped it wouldn't be asked.</p>
+
+      <p>"I think somebody will," Cecilia said. "I have to think that. Otherwise, what am I doing with my mornings instead of sleeping?" She said it lightly, but her eyes had gone somewhere else, somewhere Quinn recognized and didn't fully understand. It was a distance that opened up sometimes when the conversation touched anything close to before. "I used to write for people who already agreed with me. Papers no one outside three departments would ever read, arguments about policy structured so carefully that they never once had to touch what the policies actually did to actual people, because that wasn't what anyone wanted. I got very good at being careful in exactly that way. It got me nowhere." She turned her cup slowly in her hands, not drinking from it, just turning it. "This is different. I'm not being careful anymore. I'm writing what I actually saw. I have to believe that means something, even if it only ever means something to me."</p>
+
+      <p>"It means something to me," Quinn said.</p>
+
+      <p>"You don't count. You're required to like it, you're my girlfriend." Cecilia rolled her eyes, but she was smiling again when she said it, and she reached across the small space between the chairs and caught Quinn's hand, held it a moment before letting it go. "Someday the Uppercity is going to have to look at this place and admit it's full of people, not just Bligjt and rot and things to be kept behind a wall. I want to be the reason they finally do. That's not nothing, is it? Wanting that."</p>
+
+      <p>"No," Quinn agreed. "It's not nothing."</p>
+
+      <p>She meant it, mostly. The part of her that had grown down here, that had buried enough people and watched enough doors close to know exactly how little the Uppercity's opinion had ever cost it to keep, wanted to say something harder, something about how a manuscript wasn't a key and hope wasn't a plan. But she kept it in her head instead, because Cecilia's whole face was still lit with the idea of it, and there wasn't a version of the harder truth that was worth putting that light out this early in the day.</p>
+
+      <p>The knock came before she had to decide to say anything else, three sharp raps against the door frame, and Quinn was up and across the room before Cecili had even set her cup down, another old habit surfacing.</p>
+
+      <p>It wasn't trouble. Trouble rarely bothered to knock. She recognized the man on the other side through the gap before she opened it fully, a broad-shouldered fixer, Ossie, who ran loading crews out of the Second Ward transit exchange, someone she'd done small work for twice, unloading crates off the overnight lifts when his usual crew came up short.</p>
+
+      <p>"Quinn." He didn't step in, just stood in the hall with his hands in his coat pockets. "Got a minute?"</p>
+
+      <p>"Depends what it costs me." She leaned against the frame, blocking the doorway without quite meaning to look like she was blocking it. Behind her she heard Cecilia's chair creak, and the small sound of the tablet being set aside.</p>
+
+      <p>"Nothing today. Might cost you something tomorrow, if you take it." Ossie glanced past her shoulder, nodded once at Cecilia, then back to Quinn. "I've got a standing post open on the overnight lift crew. Regular pay, every week, none of this piecework nonsense you've been running yourself ragged on. You'd be running the clearance checks on the cargo lifts, the ones that go up through the transfer shafts into the lower Uppercity docks."</p>
+
+      <p>"And you're offering it to me because...?"</p>
+
+      <p>"Because you're fast and you don't steal from the crates and half my usual crew got themselves picked up in the raid two nights back." He said it plainly, which was the thing Quinn had always found tolerable about Ossie. "It's good money, Quinn. Steadier than what you're doing now, and safer besides, you'd be working the lifts instead of running the tunnels."</p>
+
+      <p>"What's the catch?"</p>
+
+      <p>Ossie's mouth did something complicated, somewhere between a wince and a shrug. "Lift clearance runs off ocular scan. The regime doesn't let unverified eyes anywhere near their transfer shafts, not since the last theft ran three million credits deep before anyone noticed. You'd need the reader chip. Quick procedure, regime clinic does it same day, costs you nothing up front, comes out of your first month's pay."</p>
+
+      <p>There it was.</p>
+
+      <p>Quinn felt something close under her ribs, quick and cold, how it always felt whenever this particular kind of offer came around dressed up in whatever job happened to be attached to it that week. She'd hat it offered to her before, different jobs, same catch, always some version of a chip or a socket or a strip of mech laced under the skin that would let her do the work faster, safer, or better.</p>
+
+      <p>"No," she said.</p>
+
+      <p>"Didn't even think about it."</p>
+
+      <p>"Don't need to." She kept her voice easy, because there wasn't any reason to make Ossie the target of something that predated him by years. "Appreciate the offer."</p>
+
+      <p>Ossie studied her for a moment, then shrugged and stepped back from the door. "Your call. Offer holds a week if you change your mind. Good money, Quinn, better than most scrappers get."</p>
+
+      <p>"I'll manage without it."</p>
+
+      <p>He left the way he'd come, unhurried, already thinking about the next name on whatever list had brought him down this hallway. Quinn shut the door behind him and stood for a moment with her hand still on the latch before she turned back into the room.</p>
+
+      <p>Cecilia was watching her from the chair, tablet forgotten in her lap.</p>
+
+      <p>"You turned down steady work," she said. Not an accusation, just putting that out there where they could both look at it.</p>
+
+      <p>"I turned down a chip." Quinn crossed back into the kettle, poured water she didn't especially want over the last of the tea leaves, gave herself something to do with her hands. "The work was fine."</p>
+
+      <p>"Same thing's happened before. Not exactly, but close enough I'm noticing something." Cecilia's voice stayed gentle, no push in it, just the quiet attention she gave to anything she'd decided was worth understanding properly. "You never even consider it. You didn't consider it just now."</p>
+
+      <p>"Nothing to consider."</p>
+
+      <p>"Quinn."</p>
+
+      <p>She heard her own name in that way Cecilia said it sometimes, patient, not letting her off the hook without actually saying she wasn't letting her off the hook, and Quinn set the cup down harder than she meant to, tea sloshing over the rim onto her wrist.</p>
+
+      <p>"I don't like the idea of it," she said finally. "Something under the skin that isn't mine. Something the regime put there, or approved, or can reach into if it ever decides it wants to." She wiped her wrist against her shirt, not looking at Cecilia while she said it, because it was easier to get the words out at the counter than it was across the small distance of the room. "I've seen what it does to people. Not the chip specifically, just, augments generally. There was a woman on our old block when I was a kid, got a leg fitted after a collapse took the real one, regime program, free of charge if you signed the right waivers. Worked fine for about a year. Then it started seizing up on her at random, mid-step sometimes, dropped her flat in the street twice that I saw. Nobody down here had the parts or the training to fix regime tech properly, so she just learned to live with it seizing. It's disgusting. Every step, for the rest of her life, some part of her was waiting to see if her leg would fail her that day."</p>
+
+      <p>"That's not the same as an ocular reader chip for a cargo lift."</p>
+
+      <p>"I know it's not the same." Quinn turned around at last. "It's not really about the leg, or this chip specifically. Something goes in, and it's not really yours anymore, not the way the rest of you is yours. It answers to whoever built it before it answers to you. I don't want anything in me that works that way. I've spent my whole life being the only thing about myself that nobody else gets to have a say in. I'm not going to volunteer that away for better pay."</p>
+
+      <p>Cecilia was quiet for a moment, turning it over in her head, and Quinn watched her decision cross her face before she spoke again.</p>
+
+      <p>"I wasn't trying to talk you into it," she said. "I just wanted to understand it. I think I do now."</p>
+
+      <p>"It's not that complicated."</p>
+
+      <p>"It's exactly that complicated, or you wouldn't have needed three sentences to explain something you usually answer with one word." But Cecilia was smiling when she said it, no vitriol, and she held out a hand. Quinn crossed the room and took it, let herself be pulled down onto the arm of the chair beside her. "For what it's worth, I don't think you're wrong to feel that way. I've just never heard you actually say why before. You usually just say no and change the subject."</p>
+
+      <p>"I'm saying why now."</p>
+
+      <p>"You are." Cecilia leaned her head against Quinn's arm, and for a while neither of them said anything else, the tablet balanced forgotten between them, the tea going cold again on the table, the sound of the block outside going about its morning without either of them paying it much attention.</p>
+
+      <p>They spent the rest of the day the way they hadn't managed to spend a day together in longer than either of them would have admitted counting. Quinn started with the jacket, needle pinched between two fingers better suited to picking locks than sewing, working the thread back and forth through the torn lining while Cecilia read to her from the manuscript in the next chair.</p>
+
+      <p>Cecilia's reading voice was different from her talking voice, slower, more careful She got three lines into the section on the transit-depot medics and stopped.</p>
+
+      <p>"That's clumsy," she said, mostly to herself, and struck through something hard enough that Quinn heard the stylus scratch across the glass from across the room. "Listen to this instead." She read the same sentence again with two words swapped and looked up, waiting.</p>
+
+      <p>"Sounds the same to me."</p>
+
+      <p>"It is not the same." She was smiling when she said it, though, and went back to reading, working down the page, stopping every few lines to ask whether a word fit, whether a sentence sounded like something a person would actually say, whether a paragraph's rhythm held up once you heard it instead of just reading it silently. Quinn didn't always understand what she was being asked to judge. She gave her opinion anyway, because it was clear Cecilia wanted the opinion more than she wanted it to be right, the same way she always did when she was close to something and needed someone else's ears to tell her she'd gotten there.</p>
+
+      <p>By the time the light through the curtain had gone from a brighter gray to the flatter gray of late afternoon, Quinn had finished the jacket and moved on to a sock she'd been ignoring for a week, and Cecilia had read her way through half the manuscript twice over, editing as she went, until her voice had gone rough and she declared herself done for the day.</p>
+
+      <p>Dinner was what was left of the skewers from two nights back, cold, eaten standing at the counter because neither of them could summon the will to clear the table for a meal that would take less time to finish than the clearing would. Cecilia complained about the grease going solid on hers and ate it anyway. They didn't talk about much: whether Ossie would find someone else for the lift job before the week was out, whether the leak over the stove had gotten worse or Quinn was only imagining it, a mostly-teasing argument over whether the sock was worth saving at all.</p>
+
+      <p>Cecilia went back to the tablet after, curled into the good chair with her knees pulled up under her. Within the hour her eyes had stopped moving across the screen and her breathing had gone slow and even, the tablet tipping in her slack hand until Quinn caught it before it slid to the floor. Quinn saved whatever paragraph she'd been in the middle of, set the tablet face down on the table, and sat on the arm of the chair for a while, not doing anything, just watching her sleep in the thinning light, which was rarer for either of them than either would have said out loud.</p>
+
+      <p>It was evening by the time Cecilia stirred, blinking against the lamplight, disoriented for a moment.</p>
+
+      <p>"How long was I out?"</p>
+
+      <p>"Couple hours. You needed it." Quinn had moved to the floor by then, back against the chair leg, close enough that Cecilia's hand found her shoulder without either of them thinking much about it. "You want the tablet back, or should I hide it from you until tomorrow for your own good?" She teased.</p>
+
+      <p>"Don't you dare." But Cecilia didn't reach for it. She sat there instead, still half in the fog of the nap, watching the lamp flicker where the wiring never quite held steady, and when she spoke again her voice had gone somewhere softer, somewhere more private.</p>
+
+      <p>"I keep thinking about the ending," she said. "For the book. I don't have one yet, not really, I've been putting it off because everything I try feels too neat for what the rest of it is. But I keep coming back to wanting it to end with someone up there actually reading it. Not metaphorically. Someone specific, opening it, getting to the last page. I picture it more than I probably should."</p>
+
+      <p>"Who?"</p>
+
+      <p>Cecilia was quiet a moment too long before she answered, something in her face shifted, some old weather passing behind her eyes.</p>
+
+      <p>"Committee," she said finally. "The one that pulled my credentials. I keep picturing handing it to them myself, actually, which is ridiculous, they'd never let me anywhere near the building again, but I picture it anyway. All of them sitting there having to read what they voted to bury under a wall and call solved." Her hand tightened slightly on Quinn's shoulder, unconscious, and she looked down at her own wrist for a second, turned it over like she was checking for something, though there was nothing there but skin. "The thing they don't understand, the thing nobody up there understands, is that when it actually happens to you, when you're the one it's happening to, it doesn't feel like the story they tell about it. It doesn't feel like something you did wrong. It feels like something that just, arrives, whether you—"</p>
+
+      <p>She stopped.</p>
+
+      <p>It was small. Small enough that on any other night Quinn might not have caught it at all, a half breath cut short and her hand going still against Quinn's shoulder, her eyes flicking away from her own wrist as though she'd only just noticed she'd been looking at it. For a second something moved across her face that Quinn didn't have a name for, gone too fast to read properly, there and then folded away behind the same tired warmth she always wore like a second skin.</p>
+
+      <p>"Anyway." Cecilia's voice came back lighter, the lightness seemingly papered over something rather than dissolving it. "I'm getting ahead of myself. I don't even have a middle yet, I shouldn't be worrying about endings." She reached for the tablet, pulled it back into her lap, and the moment closed over as easily as it had opened, no seam left showing. "What's for dinner. Please tell me it's not the skewers again, I don't think either of us can face them a third time."</p>
+
+      <p>"I was going to see what Renna's got left at the stall before she closes up."</p>
+
+      <p>"Perfect. Go. Bring back something that isn't gray. Please." Cecilia was already tapping at the tablet again, already somewhere behind her own eyes, the thread of whatever she'd almost said gone as far as Quinn could tell, folded away into whatever place Cecilia kept the things she didn't finish saying.</p>
+
+      <p>Quinn pulled her boots on by the door, glanced back once. Cecilia had her head bent over the tablet, hair coming loose again from its knot, mouth already moving faintly over some sentence only she could hear, warm in the lamplight, entirely herself, and if something had passed across her face a minute ago that didn't quite belong there, it had passed. Quinn let it go. There were a hundred small things Cecilia didn't say out loud in the course of an ordinary evening, old griefs she kept private the way anyone did, and this felt like one more of them, nothing sharper than the rest.</p>
+
+      <p>She stepped out into the hallway, pulled the door shut behind her, and in fact, went to find something for dinner that wasn't gray.</p>
+
+      <div class="scene-break" aria-hidden="true">&nbsp; ✦ &nbsp;</div>
+
+      <div class="next-card" id="continue">
+        <p><a href="../index.html#chapters">Back to overview</a></p>
+      </div>
+
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="https://www.auraea.fyi">www.auraea.fyi</a>
+    <a href="https://silence.auraea.fyi">silence.auraea.fyi</a>
+    </div>
+  <div>© <span id="year"></span> lexie</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="../js/render.js"></script>
+</body>
+</html>
