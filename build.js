@@ -5,7 +5,7 @@ const path = require('path');
 
 const SCRIPT_DIR = __dirname;
 const DEFAULT_WRITING_DIR = path.resolve(SCRIPT_DIR, '../../../writing/deafening silence/writing');
-const DEFAULT_SITE_DIR = path.resolve(SCRIPT_DIR);
+const DEFAULT_SITE_DIR = path.resolve(SCRIPT_DIR, 'public');
 
 function parseArgs(argv) {
   const args = { source: DEFAULT_WRITING_DIR, site: DEFAULT_SITE_DIR, check: false, help: false };
